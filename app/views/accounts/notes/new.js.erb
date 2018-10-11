@@ -1,4 +1,4 @@
-<% partial = render('notes/form') %>
+<% partial = render('accounts/notes/form') %>
 container = $('#notes_container_<%= params[:element_id] %>');
 container.toggle();
 container.html(<%= raw(partial.inspect) %>);
@@ -7,4 +7,3 @@ container.html(<%= raw(partial.inspect) %>);
   container.append(<%= raw(render(@notes).inspect) %>);
   container.append("<hr>")
 <% end %>
-
