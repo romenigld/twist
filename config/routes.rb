@@ -38,7 +38,12 @@ Twist::Application.routes.draw do
       end
 
 
-      resources :invitations, only: [:new, :create]
+      resources :invitations, only: [:new, :create] do
+        member do
+          get :accept
+          patch :accepted
+        end
+      end
     end
   end
 
